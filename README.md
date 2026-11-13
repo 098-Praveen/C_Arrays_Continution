@@ -89,3 +89,69 @@ int main()
     }
     return 0;
 }
+
+STAGE 13:
+INSERTION AND DELETION IN ARRAYS:
+for insertion an element in particual position:
+FROM RIGHT TO LEFT:
+#include<stdio.h>
+int main()
+{
+    int a[6]={10,20,30,40,50};
+    int i,pos=2,value=25,n;
+    n=sizeof(a)/sizeof(a[0]);
+    printf("n=%d\n",n);
+    for(i=n-2;i>=pos;i--)
+    {
+        a[i+1]=a[i];
+    }
+    a[pos]=value;
+    for(i=0;i<n;i++)
+    {
+        printf("%d ",a[i]);
+    }
+    return 0;
+}
+
+bcz index 5 is empty we need to put index 4 to 5 which is 6th position
+INSERT AT LAST POSITION:
+#include<stdio.h>
+int main()
+{
+    int a[6]={10,20,30,40,50};
+    int i,value=60,n;
+    n=sizeof(a)/sizeof(a[0]);
+   
+   for(i=0;i<n-1;i++)
+    {
+       printf("%d ",a[i]);
+    }
+    printf("\n");
+    a[i]=value;
+    for(i=0;i<n;i++)
+    {
+        printf("%d ",a[i]);
+    }
+    return 0;
+}
+ARRAY DELETION:
+
+DELETION MEANS REMOVING AN ELEMENT FROM A PARTICULAR POSITION IN AN ARRAY:
+#include<stdio.h>
+int main()
+{
+   int a[]={10,20,30,40,50};
+   int pos=2,i;
+   int n=sizeof(a)/sizeof(a[0]);
+   for(i=pos;i<n-1;i++)
+   {
+       a[i]=a[i+1];
+   }
+   for(i=0;i<n-1;i++)
+   {
+       printf("%d ",a[i]);
+   }
+   return 0;
+}
+from left to right
+
