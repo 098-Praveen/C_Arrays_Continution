@@ -155,3 +155,28 @@ int main()
 }
 from left to right
 
+FREQUENCY AND DUPLICATE ELEMENTS IN ARRAYS:
+FREQUENCY:  means the no of times an element appears in an array:
+
+#include<stdio.h>
+int main()
+{
+    int a[]={5,2,5,3,2,5,4};
+    int key=5,count=0;
+    int n=sizeof(a)/sizeof(a[0]);
+    for(int i=0;i<n;i++)
+    {
+        if(a[i]==key)
+        {
+            count++;
+        }
+    }
+    printf("%d",count);
+}
+
+DUPLICATING ELEMENTS:
+
+elements that are appeared more than once.
+
+
+
