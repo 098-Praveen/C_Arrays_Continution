@@ -179,4 +179,33 @@ DUPLICATING ELEMENTS:
 elements that are appeared more than once.
 
 
-
+#include<stdio.h>
+int main()
+{
+    int i,j,n;
+    int a[]={5,2,5,3,2,5,4};
+    n=sizeof(a)/sizeof(a[0]);
+    for(i=0;i<n;i++)
+    {
+        int flag=0,seen=0;
+        for(j=i+1;j<n;j++)
+        {
+            if(a[i]==a[j])
+            {
+                flag=1;
+            }
+        }
+        for(j=0;j<i;j++)
+        {
+            if(a[i]==a[j])
+            {
+                seen=1;
+            }
+        }
+        if(flag==1&&seen==0)
+        {
+            printf("%d ",a[i]);
+        }
+    }
+return 0;
+}
